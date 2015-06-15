@@ -14,7 +14,8 @@ APOC_AA_VehOptions =
 	["IFV-6a Cheetah AA","B_APC_Tracked_01_AA_F",70000,"vehicle"],
 	["T-100 Varsuk","O_MBT_02_cannon_F",100000,"vehicle"],
 	["MH-9 Hummingbird","B_Heli_Light_01_F",15000,"vehicle"],
-	["UH-80 Ghost Hawk", "B_Heli_Transport_01_F", 45000, "vehicle"]
+	["UH-80 Ghost Hawk", "B_Heli_Transport_01_F", 45000, "vehicle"],
+	["Motorboat",      "C_Boat_Civil_01_F",    2000, "vehicle"]
 	
 ];
 
