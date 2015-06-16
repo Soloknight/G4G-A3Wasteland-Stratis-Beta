@@ -26,6 +26,7 @@ if (_uid call isAdmin) then
 					"Access Respawn Dialog",
 					"Access Proving Grounds",
 					"Show Server FPS",
+					"Access G4G News",
 					"Unlock All (50m)",
 					"Delete All Unlocked (50m)"
 	];

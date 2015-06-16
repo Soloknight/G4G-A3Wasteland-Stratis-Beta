@@ -199,6 +199,14 @@ class playerSettings {
 			onButtonClick = "[] execVM 'addons\disableEnvironment\disableEnvironment.sqf'";
 			x = 0.158; y = 0.5;
 			w = 0.125; h = 0.033 * safezoneH;
+		};		
+		
+		class TOParmaInfoButton : w_RscButton {
+			idc = -1;
+			text = "G4G Info";
+			onButtonClick = "[] execVM 'addons\G4GarmaInfo\loadTOParmaInfo.sqf'";
+			x = 0.158; y = 0.57;
+			w = 0.125; h = 0.033 * safezoneH;
 		};
 		
 		class btnDistanceInsane : w_RscButton {

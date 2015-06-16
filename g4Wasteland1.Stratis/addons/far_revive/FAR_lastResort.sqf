@@ -4,7 +4,7 @@
 //	@file Name: FAR_lastResort.sqf
 //	@file Author: AgentRev
 
-private ["_hasCharge", "_hasSatchel", "_hasCharge2", "_hasSatchel2", "_mineType", "_pos", "_mine"];
+private ["_hasCharge", "_hasSatchel", "_hasCharge2", "_hasSatchel2", "_mineType", "_pos", "_mine","_rustyTrigger"];
 
 _hasCharge = "IEDUrbanSmall_Remote_Mag" in magazines player;
 _hasSatchel = "IEDUrbanBig_Remote_Mag" in magazines player;
@@ -54,17 +54,31 @@ if !(player getVariable ["performingDuty", false]) then
 					_mineType = "IEDLandBig_F";
 					player removeMagazine "DemoCharge_Remote_Mag";
 				};
+
 			};
+			
+			_rustyTrigger = floor (random 100);
+			
+			if (_rustyTrigger < 33) then
+			{
 
-			sleep 1.75;
+				sleep 1.75;
 
-			_pos = getPosATL player;
-			_pos set [2, (_pos select 2) + 0.5];
+				_pos = getPosATL player;
+				_pos set [2, (_pos select 2) + 0.5];
 
-			_mine = createMine [_mineType, _pos, [], 0];
-			_mine setDamage 1;
-			player setDamage 1;
-			player setVariable ["performingDuty", nil];
+				_mine = createMine [_mineType, _pos, [], 0];
+				_mine setDamage 1;
+				player setDamage 1;
+				player setVariable ["performingDuty", nil];
+			}
+			else
+			{
+				titleText ["Your vest malfunctioned, rusty component failure.", "PLAIN", 0.5];
+				sleep 1.75;
+				player setDamage 1;
+				player setVariable ["performingDuty", nil];
+			};
 		};
 	}
 	else

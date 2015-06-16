@@ -155,7 +155,11 @@ if (_uid call isAdmin) then
 					};
 					
 				};
-				case 9: //Test Function
+				case 9: //Access TOParma News
+				{
+					[] call loadTOParmaInfo;
+				};
+				case 10: //Test Function
 				{
 					_group = createGroup civilian;
 					_leader = _group createunit ["C_man_polo_1_F", getPos player, [], 0.5, "Form"];
